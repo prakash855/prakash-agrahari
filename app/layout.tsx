@@ -31,11 +31,19 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: 'https://avatars.githubusercontent.com/u/56213227?v=4',
+    url: siteUrl,
     title: "Prakash Agrahari | Senior Frontend / MERN Stack Engineer",
     description:
       "5+ years of experience designing scalable frontend systems, polished product interfaces, and modern MERN applications.",
-    siteName: "Prakash Agrahari Portfolio"
+    siteName: "Prakash Agrahari Portfolio",
+    images: [
+      {
+        url: "https://avatars.githubusercontent.com/u/56213227?v=4",
+        width: 1200,
+        height: 630,
+        alt: "Prakash Agrahari Portfolio"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
