@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Avenir Next", "Segoe UI Variable", "Inter", "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+  --background: #f4f7fb;
+  --foreground: #111827;
+  --muted: #516074;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --surface-soft: rgba(255, 255, 255, 0.56);
+  --line: rgba(15, 23, 42, 0.09);
+  --line-strong: rgba(15, 23, 42, 0.14);
+  --accent-cool: #075985;
+  --accent-cool-soft: rgba(7, 89, 133, 0.82);
+  --accent-warm: #92400e;
+  --card-shadow: 0 32px 90px rgba(15, 23, 42, 0.12);
+  --hero-glow: rgba(56, 189, 248, 0.18);
+}
+
+.dark {
+  --background: #060816;
+  --foreground: #f5f7fb;
+  --muted: #9ba7ba;
+  --surface: rgba(10, 14, 30, 0.74);
+  --surface-strong: rgba(13, 18, 38, 0.94);
+  --surface-soft: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --accent-cool: #bae6fd;
+  --accent-cool-soft: rgba(186, 230, 253, 0.82);
+  --accent-warm: #fde68a;
+  --card-shadow: 0 32px 100px rgba(0, 0, 0, 0.42);
+  --hero-glow: rgba(34, 211, 238, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.1), transparent 30%),
+    radial-gradient(circle at 85% 5%, rgba(251, 191, 36, 0.08), transparent 16%),
+    linear-gradient(180deg, color-mix(in srgb, var(--background) 90%, white 10%) 0%, var(--background) 42%, color-mix(in srgb, var(--background) 88%, black 12%) 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: white;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+@utility container-shell {
+  @apply rounded-[2rem] border backdrop-blur-xl;
+  background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--surface) 74%, transparent 26%));
+  border-color: var(--line);
+  box-shadow: var(--card-shadow);
+}
+
+@utility section-shell {
+  @apply container-shell relative overflow-hidden px-5 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12;
+}
+
+@utility display-title {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.06em;
+}
+
+@utility accent-cool {
+  color: var(--accent-cool);
+}
+
+@utility accent-cool-soft {
+  color: var(--accent-cool-soft);
+}
+
+@utility accent-warm {
+  color: var(--accent-warm);
+}
+
+@utility fine-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
