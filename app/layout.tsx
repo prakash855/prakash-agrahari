@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Prakash Agrahari Portfolio",
     images: [
       {
-        url: "https://avatars.githubusercontent.com/u/56213227?v=4",
+        url: "/me.jpeg",
         width: 1200,
         height: 630,
         alt: "Prakash Agrahari Portfolio"
