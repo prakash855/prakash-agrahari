@@ -12,15 +12,17 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 mx-auto w-full max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 mx-auto my-5 w-full max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
       <div className="container-shell flex items-center justify-between px-4 py-3 sm:px-5">
-        <a href="#home" className="flex items-center gap-3">
-          <div className="flex size-11 items-center justify-center rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] text-sm font-semibold accent-cool">
+        <a href="#home" className="flex items-center gap-4">
+          <div className="flex size-12 items-center justify-center rounded-2xl border border-[var(--line)] bg-[var(--surface-soft)] text-base font-semibold accent-cool">
             PA
           </div>
-          <div>
-            <div className="text-sm font-semibold text-[var(--foreground)]">{profile.name}</div>
-            <div className="text-xs text-[var(--muted)]">{profile.role}</div>
+          <div className="leading-none">
+            <div className="display-title text-lg font-semibold tracking-tight text-[var(--foreground)] sm:text-xl">
+              {profile.name}
+            </div>
+            <div className="mt-1.5 text-xs text-[var(--muted)] sm:text-sm">{profile.role}</div>
           </div>
         </a>
 
