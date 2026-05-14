@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 
-const siteUrl = "https://prakashagrahari.dev";
+const siteUrl = "https://prakash-agrahari.vercel.app";
+const ogImageUrl = `${siteUrl}/me.jpeg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Prakash Agrahari Portfolio",
     images: [
       {
-        url: "/me.jpeg",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "Prakash Agrahari Portfolio"
@@ -49,7 +50,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prakash Agrahari | Senior Frontend / MERN Stack Engineer",
     description:
-      "Modern portfolio showcasing React, Next.js, TypeScript, frontend architecture, and full-stack product engineering."
+      "Modern portfolio showcasing React, Next.js, TypeScript, frontend architecture, and full-stack product engineering.",
+    images: [ogImageUrl]
   },
   category: "technology"
 };
